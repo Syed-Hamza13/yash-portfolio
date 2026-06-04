@@ -827,10 +827,21 @@
   </main><!-- end .main -->
 
   <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+ <div class="lightbox" id="lightbox">
+
     <span class="lightbox-close" onclick="closeLightbox()">×</span>
-    <img src="" alt="" class="lightbox-img" id="lightbox-img">
-  </div>
+
+    <button class="lightbox-nav lightbox-prev" onclick="prevImage()">
+        ❮
+    </button>
+
+    <img id="lightbox-img" class="lightbox-img">
+
+    <button class="lightbox-nav lightbox-next" onclick="nextImage()">
+        ❯
+    </button>
+
+</div>
 
 
 

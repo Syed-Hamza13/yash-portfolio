@@ -100,9 +100,7 @@ filterBtns.forEach((btn) => {
     let items = [...portfolioItems];
 
     if (filter !== "all") {
-      items = items.filter(
-        (item) => item.dataset.category === filter
-      );
+      items = items.filter((item) => item.dataset.category === filter);
     }
 
     updatePortfolioLayout(items);
@@ -110,21 +108,71 @@ filterBtns.forEach((btn) => {
 });
 
 // ── Lightbox ──
+let currentIndex = 0;
+let currentGallery = [];
+
 function openLightbox(el) {
-  const img = el.querySelector("img");
-  document.getElementById("lightbox-img").src = img.src;
-  document.getElementById("lightbox-img").alt = img.alt;
+  currentGallery = Array.from(
+    document.querySelectorAll(".portfolio-item"),
+  ).filter((item) => {
+    return item.offsetParent !== null;
+  });
+
+  currentIndex = currentGallery.indexOf(el);
+
+  showCurrentImage();
+
   document.getElementById("lightbox").classList.add("open");
+
   document.body.style.overflow = "hidden";
+}
+
+function showCurrentImage() {
+  const img = currentGallery[currentIndex].querySelector("img");
+
+  document.getElementById("lightbox-img").src = img.src;
+
+  document.getElementById("lightbox-img").alt = img.alt;
+}
+
+function nextImage() {
+  currentIndex++;
+
+  if (currentIndex >= currentGallery.length) {
+    currentIndex = 0;
+  }
+
+  showCurrentImage();
+}
+
+function prevImage() {
+  currentIndex--;
+
+  if (currentIndex < 0) {
+    currentIndex = currentGallery.length - 1;
+  }
+
+  showCurrentImage();
 }
 
 function closeLightbox() {
   document.getElementById("lightbox").classList.remove("open");
+
   document.body.style.overflow = "";
 }
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") closeLightbox();
+  if (e.key === "Escape") {
+    closeLightbox();
+  }
+
+  if (e.key === "ArrowRight") {
+    nextImage();
+  }
+
+  if (e.key === "ArrowLeft") {
+    prevImage();
+  }
 });
 
 // ── Contact Form ──
@@ -142,10 +190,6 @@ function handleFormSubmit(e) {
   }, 3000);
 }
 
-window.addEventListener('load',()=>{
-
-    updatePortfolioLayout(
-        [...portfolioItems]
-    );
-
+window.addEventListener("load", () => {
+  updatePortfolioLayout([...portfolioItems]);
 });
