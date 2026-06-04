@@ -65,37 +65,48 @@ const filterBtns = document.querySelectorAll(".filter-btn");
 const portfolioItems = document.querySelectorAll(".portfolio-item");
 const portfolioGrid = document.getElementById("portfolio-grid");
 
-filterBtns.forEach(btn=>{
+function updatePortfolioLayout(items) {
+  portfolioGrid.innerHTML = "";
 
-    btn.addEventListener('click',()=>{
+  items.forEach((item) => {
+    portfolioGrid.appendChild(item.cloneNode(true));
+  });
 
-        filterBtns.forEach(b=>b.classList.remove('active'));
-        btn.classList.add('active');
+  const screenWidth = portfolioGrid.parentElement.offsetWidth;
 
-        const filter = btn.dataset.filter;
+  const columnsNeeded = Math.ceil(items.length / 2);
 
-        portfolioGrid.innerHTML='';
+  const requiredWidth = columnsNeeded * 300;
 
-        let items=[...portfolioItems];
+  portfolioGrid.classList.remove("auto-scroll", "normal-grid");
 
-        if(filter!=='all'){
-            items=items.filter(
-                item=>item.dataset.category===filter
-            );
-        }
-
-        items.forEach(item=>{
-            portfolioGrid.appendChild(item.cloneNode(true));
-        });
-
-        items.forEach(item=>{
-            portfolioGrid.appendChild(item.cloneNode(true));
-        });
-
-        portfolioGrid.classList.add('auto-scroll');
-
+  if (requiredWidth > screenWidth) {
+    items.forEach((item) => {
+      portfolioGrid.appendChild(item.cloneNode(true));
     });
 
+    portfolioGrid.classList.add("auto-scroll");
+  } else {
+    portfolioGrid.classList.add("normal-grid");
+  }
+}
+filterBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    filterBtns.forEach((b) => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.dataset.filter;
+
+    let items = [...portfolioItems];
+
+    if (filter !== "all") {
+      items = items.filter(
+        (item) => item.dataset.category === filter
+      );
+    }
+
+    updatePortfolioLayout(items);
+  });
 });
 
 // ── Lightbox ──
@@ -133,12 +144,8 @@ function handleFormSubmit(e) {
 
 window.addEventListener('load',()=>{
 
-    const items=[...portfolioItems];
-
-    items.forEach(item=>{
-        portfolioGrid.appendChild(item.cloneNode(true));
-    });
-
-    portfolioGrid.classList.add('auto-scroll');
+    updatePortfolioLayout(
+        [...portfolioItems]
+    );
 
 });
