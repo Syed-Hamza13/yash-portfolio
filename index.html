@@ -619,135 +619,144 @@
         where you can add your videos — paste a YouTube or Vimeo link to embed them instantly.
       </p>
 
-      <div class="video-grid">
+      <div class="video-slider-wrapper">
+        <div class="video-grid auto-video-scroll">
 
-        <!-- SLOT 1 — Replace src with your YouTube embed URL -->
-        <div class="fade-in" style="transition-delay:0.05s">
-          <div class="video-embed-slot" id="video-slot-1">
-            <div
-              style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
-              <div class="play-icon"
-                style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
-                <div
-                  style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+          <!-- SLOT 1 — Replace src with your YouTube embed URL -->
+          <div class="fade-in" style="transition-delay:0.05s">
+            <div class="video-embed-slot" id="video-slot-1">
+              <div
+                style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
+                <div class="play-icon"
+                  style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
+                  <div
+                    style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+                  </div>
+                </div>
+                <div style="font-size:14px;font-weight:600;color:white">Promotional Video 1</div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate
                 </div>
               </div>
-              <div style="font-size:14px;font-weight:600;color:white">Promotional Video 1</div>
-              <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate</div>
+              <div class="video-wrapper"></div>
+              <iframe src="https://drive.google.com/file/d/1tkEEKJIVymQo5-TQ77SW1KEafK2pr3Kq/preview" allow="autoplay"
+                allowfullscreen>
+              </iframe>
             </div>
-            <div class="video-wrapper"></div>
-            <iframe src="https://drive.google.com/file/d/1tkEEKJIVymQo5-TQ77SW1KEafK2pr3Kq/preview" allow="autoplay"
-              allowfullscreen>
-            </iframe>
           </div>
-        </div>
 
-        <!-- SLOT 2 -->
-        <div class="fade-in" style="transition-delay:0.1s">
-          <div class="video-embed-slot" id="video-slot-2">
-            <div
-              style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
-              <div class="play-icon"
-                style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
-                <div
-                  style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+          <!-- SLOT 2 -->
+          <div class="fade-in" style="transition-delay:0.1s">
+            <div class="video-embed-slot" id="video-slot-2">
+              <div
+                style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
+                <div class="play-icon"
+                  style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
+                  <div
+                    style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+                  </div>
+                </div>
+                <div style="font-size:14px;font-weight:600;color:white">AI Brand Video</div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate
                 </div>
               </div>
-              <div style="font-size:14px;font-weight:600;color:white">AI Brand Video</div>
-              <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate</div>
+              <div class="video-wrapper"></div>
+              <iframe src="https://drive.google.com/file/d/1RjopV_wv7KdEoE5ekhF0Kfkg60f738A0/preview" allow="autoplay"
+                allowfullscreen>
+              </iframe>
             </div>
-            <div class="video-wrapper"></div>
-            <iframe src="https://drive.google.com/file/d/1RjopV_wv7KdEoE5ekhF0Kfkg60f738A0/preview" allow="autoplay"
-              allowfullscreen>
-            </iframe>
           </div>
-        </div>
 
-        <!-- SLOT 3 -->
-        <div class="fade-in" style="transition-delay:0.15s">
-          <div class="video-embed-slot" id="video-slot-3">
-            <div
-              style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
-              <div class="play-icon"
-                style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
-                <div
-                  style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+          <!-- SLOT 3 -->
+          <div class="fade-in" style="transition-delay:0.15s">
+            <div class="video-embed-slot" id="video-slot-3">
+              <div
+                style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
+                <div class="play-icon"
+                  style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
+                  <div
+                    style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+                  </div>
+                </div>
+                <div style="font-size:14px;font-weight:600;color:white">Social Media Reel</div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate
                 </div>
               </div>
-              <div style="font-size:14px;font-weight:600;color:white">Social Media Reel</div>
-              <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate</div>
+              <div class="video-wrapper"></div>
+              <iframe src="https://drive.google.com/file/d/1oD7MWJaPoKt1mskD6442jSbWPGwtm1OU/preview" allow="autoplay"
+                allowfullscreen>
+              </iframe>
             </div>
-            <div class="video-wrapper"></div>
-            <iframe src="https://drive.google.com/file/d/1oD7MWJaPoKt1mskD6442jSbWPGwtm1OU/preview" allow="autoplay"
-              allowfullscreen>
-            </iframe>
           </div>
-        </div>
 
-        <!-- SLOT 4 -->
-        <div class="fade-in" style="transition-delay:0.15s">
-          <div class="video-embed-slot" id="video-slot-3">
-            <div
-              style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
-              <div class="play-icon"
-                style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
-                <div
-                  style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+          <!-- SLOT 4 -->
+          <div class="fade-in" style="transition-delay:0.15s">
+            <div class="video-embed-slot" id="video-slot-3">
+              <div
+                style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
+                <div class="play-icon"
+                  style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
+                  <div
+                    style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+                  </div>
+                </div>
+                <div style="font-size:14px;font-weight:600;color:white">Social Media Reel</div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate
                 </div>
               </div>
-              <div style="font-size:14px;font-weight:600;color:white">Social Media Reel</div>
-              <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate</div>
+              <div class="video-wrapper"></div>
+              <iframe src="https://drive.google.com/file/d/1jUbO6KQ_Ng5s1gky2CPmOYQtB0fltqDx/preview" allow="autoplay"
+                allowfullscreen>
+              </iframe>
             </div>
-            <div class="video-wrapper"></div>
-            <iframe src="https://drive.google.com/file/d/1jUbO6KQ_Ng5s1gky2CPmOYQtB0fltqDx/preview" allow="autoplay"
-              allowfullscreen>
-            </iframe>
           </div>
-        </div>
 
-        <!-- SLOT 5 -->
-        <div class="fade-in" style="transition-delay:0.15s">
-          <div class="video-embed-slot" id="video-slot-3">
-            <div
-              style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
-              <div class="play-icon"
-                style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
-                <div
-                  style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+          <!-- SLOT 5 -->
+          <div class="fade-in" style="transition-delay:0.15s">
+            <div class="video-embed-slot" id="video-slot-3">
+              <div
+                style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
+                <div class="play-icon"
+                  style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
+                  <div
+                    style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+                  </div>
+                </div>
+                <div style="font-size:14px;font-weight:600;color:white">Social Media Reel</div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate
                 </div>
               </div>
-              <div style="font-size:14px;font-weight:600;color:white">Social Media Reel</div>
-              <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate</div>
+              <div class="video-wrapper"></div>
+              <iframe src="https://drive.google.com/file/d/1t6jb0YHwsCkYMc_BfGSpeVZuXdB69npn/preview" allow="autoplay"
+                allowfullscreen>
+              </iframe>
             </div>
-            <div class="video-wrapper"></div>
-            <iframe src="https://drive.google.com/file/d/1t6jb0YHwsCkYMc_BfGSpeVZuXdB69npn/preview" allow="autoplay"
-              allowfullscreen>
-            </iframe>
           </div>
-        </div>
 
-        <!-- SLOT 6 -->
-        <div class="fade-in" style="transition-delay:0.15s">
-          <div class="video-embed-slot" id="video-slot-3">
-            <div
-              style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
-              <div class="play-icon"
-                style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
-                <div
-                  style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+          <!-- SLOT 6 -->
+          <div class="fade-in" style="transition-delay:0.15s">
+            <div class="video-embed-slot" id="video-slot-3">
+              <div
+                style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:30px;text-align:center">
+                <div class="play-icon"
+                  style="width:52px;height:52px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center">
+                  <div
+                    style="border-left:18px solid #0A0A0A;border-top:11px solid transparent;border-bottom:11px solid transparent;margin-left:4px">
+                  </div>
+                </div>
+                <div style="font-size:14px;font-weight:600;color:white">Social Media Reel</div>
+                <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate
                 </div>
               </div>
-              <div style="font-size:14px;font-weight:600;color:white">Social Media Reel</div>
-              <div style="font-size:11px;color:rgba(255,255,255,0.4)">Paste YouTube embed URL in HTML to activate</div>
+              <div class="video-wrapper"></div>
+              <iframe src="https://drive.google.com/file/d/1YQ4DuzMezebDfN5Kh6bV4SWQy15V3S8C/preview" allow="autoplay"
+                allowfullscreen>
+              </iframe>
             </div>
-            <div class="video-wrapper"></div>
-            <iframe src="https://drive.google.com/file/d/1YQ4DuzMezebDfN5Kh6bV4SWQy15V3S8C/preview" allow="autoplay"
-              allowfullscreen>
-            </iframe>
           </div>
-        </div>
 
+        </div>
       </div>
+
 
       <!-- <div class="video-add-note fade-in" style="margin-top:40px">
         <strong>📌 How to add your videos:</strong> Open this HTML file, find the
@@ -827,21 +836,21 @@
   </main><!-- end .main -->
 
   <!-- LIGHTBOX -->
- <div class="lightbox" id="lightbox">
+  <div class="lightbox" id="lightbox">
 
     <span class="lightbox-close" onclick="closeLightbox()">×</span>
 
     <button class="lightbox-nav lightbox-prev" onclick="prevImage()">
-        ❮
+      ❮
     </button>
 
     <img id="lightbox-img" class="lightbox-img">
 
     <button class="lightbox-nav lightbox-next" onclick="nextImage()">
-        ❯
+      ❯
     </button>
 
-</div>
+  </div>
 
 
 

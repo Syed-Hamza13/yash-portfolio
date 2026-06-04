@@ -1361,3 +1361,38 @@ section {
     }
 
 }
+
+
+.video-slider-wrapper{
+    overflow:hidden;
+    width:100%;
+    position:relative;
+}
+
+.video-grid.auto-video-scroll{
+    display:flex;
+    gap:24px;
+    width:max-content;
+    animation:videoScroll 40s linear infinite;
+}
+
+.video-grid.auto-video-scroll:hover{
+    animation-play-state:paused;
+}
+
+.video-grid.auto-video-scroll .fade-in{
+    flex-shrink:0;
+    width:380px;
+}
+
+@keyframes videoScroll{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}

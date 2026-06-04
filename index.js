@@ -193,3 +193,4 @@ function handleFormSubmit(e) {
 window.addEventListener("load", () => {
   updatePortfolioLayout([...portfolioItems]);
 });
+
