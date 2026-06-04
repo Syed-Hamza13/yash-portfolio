@@ -544,13 +544,15 @@ section {
   border-radius: 12px;
   padding: 24px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  text-align: justify;
+  
   border: 1.5px solid #e8e8e8;
 }
 
 .experience-logo {
-    width: 150px;
+    width: 130px;
     height: auto;
 }
 .company-logo {
@@ -653,7 +655,8 @@ section {
   padding: 28px;
   margin-top: 20px;
   display: flex;
-  gap: 20px;
+  flex-wrap:wrap;
+  text-align: justify;
   align-items: center;
 }
 
