@@ -1275,3 +1275,36 @@ section {
     height:100%;
     border:none;
 }
+
+.portfolio-slider-wrapper{
+    overflow:hidden;
+    width:100%;
+}
+
+.portfolio-grid.auto-scroll{
+    display:grid;
+    grid-auto-flow:column;
+    grid-template-rows:repeat(2,1fr);
+    gap:20px;
+    width:max-content;
+    animation:portfolioScroll 50s linear infinite;
+}
+
+.portfolio-grid.auto-scroll:hover{
+    animation-play-state:paused;
+}
+
+.portfolio-grid.auto-scroll .portfolio-item{
+    width:280px;
+    height:380px;
+}
+
+@keyframes portfolioScroll{
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+}
