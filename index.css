@@ -786,6 +786,64 @@ section {
 }
 
 /* ─────────────────────────────
+   UI UX SECTION
+───────────────────────────── */
+
+#uiux {
+  background: #ffffff;
+  min-height: auto;
+}
+
+.uiux-intro {
+  max-width: 700px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.uiux-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.uiux-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #ececec;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
+}
+
+.uiux-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.uiux-card-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.uiux-card-header h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.uiux-card-header span {
+  color: var(--gold-dark);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.uiux-card iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
+
+/* ─────────────────────────────
      VIDEO
   ───────────────────────────── */
 #videos {
@@ -1228,39 +1286,35 @@ section {
   .video-grid {
     grid-template-columns: 1fr;
   }
-
- 
 }
 
-@media (max-width:900px){
-
-  .uiux-grid{
-
-    display:flex !important;
-    flex-wrap:nowrap !important;
-
-    overflow:hidden;
-
-    gap:20px;
-
-    width:max-content;
-
-    animation:uiuxScroll 20s linear infinite;
+@media (max-width: 900px) {
+  .uiux-slider-wrapper {
+    width: 100%;
+    overflow: hidden;
   }
 
-  .uiux-card{
+  .uiux-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
 
-    width:280px;
-    min-width:280px;
+    gap: 16px;
 
-    flex:0 0 280px;
+    width: max-content;
 
+    animation: uiuxScroll 20s linear infinite;
   }
 
-  .uiux-card iframe{
-    height:500px;
+  .uiux-card {
+    width: 260px;
+    min-width: 290px;
+
+    flex-shrink: 0;
   }
 
+  .uiux-card iframe {
+    height: 300px;
+  }
 }
 
 @media (max-width: 520px) {
@@ -1430,64 +1484,6 @@ section {
   }
 }
 
-/* ─────────────────────────────
-   UI UX SECTION
-───────────────────────────── */
-
-#uiux {
-  background: #ffffff;
-  min-height: auto;
-}
-
-.uiux-intro {
-  max-width: 700px;
-  color: #666;
-  line-height: 1.8;
-  margin-bottom: 40px;
-}
-
-.uiux-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-}
-
-.uiux-card {
-  background: white;
-  border-radius: 18px;
-  overflow: hidden;
-  border: 1px solid #ececec;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-  transition: 0.3s;
-}
-
-.uiux-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-}
-
-.uiux-card-header {
-  padding: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.uiux-card-header h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.uiux-card-header span {
-  color: var(--gold-dark);
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.uiux-card iframe {
-  width: 100%;
-  height: 500px;
-  border: none;
-}
-
 .video-slider-wrapper {
   overflow: hidden;
   width: 100%;
@@ -1539,14 +1535,12 @@ section {
   }
 }
 
-@keyframes uiuxScroll{
+@keyframes uiuxScroll {
+  from {
+    transform: translateX(0);
+  }
 
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(-50%);
-    }
-
+  to {
+    transform: translateX(-50%);
+  }
 }
