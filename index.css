@@ -547,13 +547,13 @@ section {
   flex-wrap: wrap;
   align-items: center;
   text-align: justify;
-  
+
   border: 1.5px solid #e8e8e8;
 }
 
 .experience-logo {
-    width: 130px;
-    height: auto;
+  width: 130px;
+  height: auto;
 }
 .company-logo {
   width: 70px;
@@ -632,7 +632,6 @@ section {
   font-weight: 500;
   color: var(--black);
   flex: 1;
-  
 }
 
 .company-badge {
@@ -655,7 +654,7 @@ section {
   padding: 28px;
   margin-top: 20px;
   display: flex;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   text-align: justify;
   align-items: center;
 }
@@ -711,8 +710,8 @@ section {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
 }
-#portfolio-grid{
-    min-height:800px;
+#portfolio-grid {
+  min-height: 800px;
 }
 
 .portfolio-item {
@@ -951,54 +950,54 @@ section {
   gap: 16px;
 }
 
-.contact-icon{
-    width:58px;
-    height:58px;
-    background:rgba(255,186,49,.12);
-    border:2px solid rgba(255,186,49,.25);
-    border-radius:16px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    flex-shrink:0;
-    transition:.3s ease;
+.contact-icon {
+  width: 58px;
+  height: 58px;
+  background: rgba(255, 186, 49, 0.12);
+  border: 2px solid rgba(255, 186, 49, 0.25);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.3s ease;
 }
 
-.contact-icon i{
-    font-size:22px;
-    color:var(--gold);
+.contact-icon i {
+  font-size: 22px;
+  color: var(--gold);
 }
 
-.contact-info-item:hover .contact-icon{
-    transform:translateY(-3px);
-    border-color:var(--gold);
-    box-shadow:0 8px 25px rgba(255,186,49,.18);
+.contact-info-item:hover .contact-icon {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+  box-shadow: 0 8px 25px rgba(255, 186, 49, 0.18);
 }
 
-.info-text a{
-    color: var(--black);
-    text-decoration: none;
-    position: relative;
-    transition: .3s ease;
+.info-text a {
+  color: var(--black);
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s ease;
 }
 
-.info-text a::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:-2px;
-    width:0;
-    height:2px;
-    background:var(--gold);
-    transition:.3s ease;
+.info-text a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: 0.3s ease;
 }
 
-.info-text a:hover{
-    color:var(--gold-dark);
+.info-text a:hover {
+  color: var(--gold-dark);
 }
 
-.info-text a:hover::after{
-    width:100%;
+.info-text a:hover::after {
+  width: 100%;
 }
 
 .contact-info-item .info-label {
@@ -1229,6 +1228,19 @@ section {
   .video-grid {
     grid-template-columns: 1fr;
   }
+
+  @media(max-width:900px){
+
+    .uiux-grid{
+        grid-template-columns:1fr;
+    }
+
+    .uiux-card iframe{
+        height:400px;
+    }
+
+}
+
 }
 
 @media (max-width: 520px) {
@@ -1255,203 +1267,254 @@ section {
   display: block;
 }
 
-.education-item{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    width:100%;
+.education-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
 }
 
-.education-logo{
-    width:60px;
-    height:60px;
-    object-fit:contain;
-    flex-shrink:0;
+.education-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-.education-title{
-    font-weight:700;
-    font-size:16px;
-    color:var(--black);
+.education-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--black);
 }
 
-.education-location{
-    font-size:13px;
-    color:#777;
-    margin-top:4px;
+.education-location {
+  font-size: 13px;
+  color: #777;
+  margin-top: 4px;
 }
 
-@media(max-width:520px){
+@media (max-width: 520px) {
+  .education-logo {
+    width: 32px;
+    height: 32px;
+  }
 
-    .education-logo{
-        width:32px;
-        height:32px;
-    }
+  .education-title {
+    font-size: 14px;
+  }
 
-    .education-title{
-        font-size:14px;
-    }
-
-    .education-location{
-        font-size:12px;
-    }
+  .education-location {
+    font-size: 12px;
+  }
 }
 
-.video-wrapper{
-    position:relative;
-    width:100%;
-    padding-top:56.25%;
-    border-radius:12px;
-    overflow:hidden;
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.video-wrapper iframe{
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    border:none;
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-.portfolio-slider-wrapper{
-    overflow:hidden;
-    width:100%;
+.portfolio-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
 }
 
-.portfolio-grid.auto-scroll{
-    display:grid;
-    grid-auto-flow:column;
-    grid-template-rows:repeat(2,1fr);
-    gap:20px;
-    width:max-content;
-    min-height:auto;
-    animation:portfolioScroll 50s linear infinite;
+.portfolio-grid.auto-scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+  width: max-content;
+  min-height: auto;
+  animation: portfolioScroll 50s linear infinite;
 }
 
-
-.portfolio-grid.normal-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-    width:100%;
+.portfolio-grid.normal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  width: 100%;
 }
 
-.portfolio-grid.auto-scroll:hover{
-    animation-play-state:paused;
+.portfolio-grid.auto-scroll:hover {
+  animation-play-state: paused;
 }
 
-.portfolio-grid.auto-scroll .portfolio-item{
-    width:280px;
-    height:380px;
+.portfolio-grid.auto-scroll .portfolio-item {
+  width: 280px;
+  height: 380px;
 }
 
-@keyframes portfolioScroll{
-    from{
-        transform:translateX(0);
-    }
+@keyframes portfolioScroll {
+  from {
+    transform: translateX(0);
+  }
 
-    to{
-        transform:translateX(-50%);
-    }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-.lightbox-nav{
-    position:fixed;
-    top:50%;
-    transform:translateY(-50%);
-    width:60px;
-    height:60px;
-    border:none;
-    border-radius:50%;
-    background:rgba(255,255,255,0.12);
-    color:white;
-    font-size:28px;
-    cursor:pointer;
-    z-index:1001;
-    transition:0.3s;
-    backdrop-filter:blur(6px);
+.lightbox-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 1001;
+  transition: 0.3s;
+  backdrop-filter: blur(6px);
 }
 
-.lightbox-nav:hover{
-    background:rgba(255,255,255,0.25);
+.lightbox-nav:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
-.lightbox-prev{
-    left:25px;
+.lightbox-prev {
+  left: 25px;
 }
 
-.lightbox-next{
-    right:25px;
+.lightbox-next {
+  right: 25px;
 }
 
-@media(max-width:768px){
+@media (max-width: 768px) {
+  .lightbox-nav {
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
 
-    .lightbox-nav{
-        width:45px;
-        height:45px;
-        font-size:22px;
-    }
+  .lightbox-prev {
+    left: 10px;
+  }
 
-    .lightbox-prev{
-        left:10px;
-    }
-
-    .lightbox-next{
-        right:10px;
-    }
-
+  .lightbox-next {
+    right: 10px;
+  }
 }
 
+/* ─────────────────────────────
+   UI UX SECTION
+───────────────────────────── */
 
-.video-slider-wrapper{
-    overflow:hidden;
-    width:100%;
-    position:relative;
+#uiux {
+  background: #ffffff;
+  min-height: auto;
 }
 
-.video-grid.auto-video-scroll{
-    display:flex;
-    gap:24px;
-    width:max-content;
-    animation:videoScroll 20s linear infinite;
+.uiux-intro {
+  max-width: 700px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 40px;
 }
 
-.video-grid.auto-video-scroll:hover{
-    animation-play-state:paused;
+.uiux-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
 
-.video-grid.auto-video-scroll .fade-in{
-    flex-shrink:0;
-    width:380px;
+.uiux-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #ececec;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
 }
 
-@keyframes videoScroll{
-
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(-50%);
-    }
-
+.uiux-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
-.typing-cursor{
-    color: var(--gold);
-    font-weight: 700;
-    animation: blinkCursor 0.8s infinite;
-    transition: opacity .3s ease;
+.uiux-card-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
 }
 
-@keyframes blinkCursor{
+.uiux-card-header h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
 
-    0%,50%{
-        opacity:1;
-    }
+.uiux-card-header span {
+  color: var(--gold-dark);
+  font-size: 13px;
+  font-weight: 600;
+}
 
-    51%,100%{
-        opacity:0;
-    }
+.uiux-card iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+}
 
+.video-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.video-grid.auto-video-scroll {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: videoScroll 20s linear infinite;
+}
+
+.video-grid.auto-video-scroll:hover {
+  animation-play-state: paused;
+}
+
+.video-grid.auto-video-scroll .fade-in {
+  flex-shrink: 0;
+  width: 380px;
+}
+
+@keyframes videoScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.typing-cursor {
+  color: var(--gold);
+  font-weight: 700;
+  animation: blinkCursor 0.8s infinite;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes blinkCursor {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
