@@ -951,22 +951,54 @@ section {
   gap: 16px;
 }
 
-.contact-icon {
-  width: 50px;
-  height: 50px;
-  background: var(--gold);
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 20px;
+.contact-icon{
+    width:58px;
+    height:58px;
+    background:rgba(255,186,49,.12);
+    border:2px solid rgba(255,186,49,.25);
+    border-radius:16px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+    transition:.3s ease;
 }
 
-.contact-info-item .info-text {
-  font-size: 16px;
-  font-weight: 500;
-  color: var(--black);
+.contact-icon i{
+    font-size:22px;
+    color:var(--gold);
+}
+
+.contact-info-item:hover .contact-icon{
+    transform:translateY(-3px);
+    border-color:var(--gold);
+    box-shadow:0 8px 25px rgba(255,186,49,.18);
+}
+
+.info-text a{
+    color: var(--black);
+    text-decoration: none;
+    position: relative;
+    transition: .3s ease;
+}
+
+.info-text a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-2px;
+    width:0;
+    height:2px;
+    background:var(--gold);
+    transition:.3s ease;
+}
+
+.info-text a:hover{
+    color:var(--gold-dark);
+}
+
+.info-text a:hover::after{
+    width:100%;
 }
 
 .contact-info-item .info-label {
