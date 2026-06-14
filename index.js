@@ -191,79 +191,135 @@ function handleFormSubmit(e) {
 }
 
 window.addEventListener("load", () => {
-
-    setTimeout(() => {
-
-        updatePortfolioLayout(
-            [...portfolioItems]
-        );
-
-    }, 10);
-
+  setTimeout(() => {
+    updatePortfolioLayout([...portfolioItems]);
+  }, 10);
 });
 
 window.addEventListener("resize", () => {
+  const activeBtn = document.querySelector(".filter-btn.active");
 
-    const activeBtn =
-        document.querySelector(
-            ".filter-btn.active"
-        );
+  const filter = activeBtn.dataset.filter;
 
-    const filter =
-        activeBtn.dataset.filter;
+  let items = [...portfolioItems];
 
-    let items =
-        [...portfolioItems];
+  if (filter !== "all") {
+    items = items.filter((item) => item.dataset.category === filter);
+  }
 
-    if(filter !== "all"){
-
-        items = items.filter(
-            item =>
-            item.dataset.category === filter
-        );
-
-    }
-
-    updatePortfolioLayout(items);
-
+  updatePortfolioLayout(items);
 });
 
-const typingElement =
-    document.getElementById(
-        "typing-name"
-    );
+const typingElement = document.getElementById("typing-name");
 
-const typingText =
-    "Yash Chourey";
+const typingText = "Yash Chourey";
 
 let charIndex = 0;
 
-function typeHeroName(){
+function typeHeroName() {
+  if (charIndex < typingText.length) {
+    typingElement.textContent += typingText.charAt(charIndex);
 
-    if(
-        charIndex <
-        typingText.length
-    ){
+    charIndex++;
 
-        typingElement.textContent +=
-            typingText.charAt(charIndex);
+    setTimeout(typeHeroName, 70);
+  } else {
+    const cursor = document.querySelector(".typing-cursor");
 
-        charIndex++;
+    cursor.style.opacity = "0";
 
-        setTimeout(
-            typeHeroName,
-            150
-        );
-
-    }
-
+    setTimeout(() => {
+      cursor.style.display = "none";
+    }, 300);
+  }
 }
 
-document.addEventListener(
-    "DOMContentLoaded",
-    () => {
+const heroSection = document.getElementById("home");
 
+const heroObserver = new IntersectionObserver(
+  (entries) => {
+    if (entries[0].isIntersecting) {
+      setTimeout(() => {
         typeHeroName();
+      }, 150);
 
+      heroObserver.unobserve(heroSection);
     }
+  },
+  {
+    threshold: 0.3,
+  },
+);
+
+heroObserver.observe(heroSection);
+
+function animateCounter(id, target) {
+
+    const element =
+        document.getElementById(id);
+
+    let current = 0;
+
+    const increment =
+        Math.ceil(target / 40);
+
+    const timer =
+        setInterval(() => {
+
+            current += increment;
+
+            if (current >= target) {
+
+                current = target;
+
+                clearInterval(timer);
+
+            }
+
+            element.textContent =
+                current + "+";
+
+        }, 100);
+
+}let statsAnimated = false;
+
+const statsSection =
+    document.querySelector(".hero-stats");
+
+const statsObserver =
+    new IntersectionObserver(
+        (entries) => {
+
+            if (
+                entries[0].isIntersecting &&
+                !statsAnimated
+            ) {
+
+                statsAnimated = true;
+
+                animateCounter(
+                    "exp-count",
+                    1
+                );
+
+                animateCounter(
+                    "project-count",
+                    50
+                );
+
+                animateCounter(
+                    "client-count",
+                    15
+                );
+
+            }
+
+        },
+        {
+            threshold: 0.5
+        }
+    );
+
+statsObserver.observe(
+    statsSection
 );

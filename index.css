@@ -1409,6 +1409,7 @@ section {
     color: var(--gold);
     font-weight: 700;
     animation: blinkCursor 0.8s infinite;
+    transition: opacity .3s ease;
 }
 
 @keyframes blinkCursor{
