@@ -1229,17 +1229,37 @@ section {
     grid-template-columns: 1fr;
   }
 
-  @media(max-width:900px){
-
-    .uiux-grid{
-        grid-template-columns:1fr;
-    }
-
-    .uiux-card iframe{
-        height:400px;
-    }
-
+ 
 }
+
+@media (max-width:900px){
+
+  .uiux-grid{
+
+    display:flex !important;
+    flex-wrap:nowrap !important;
+
+    overflow:hidden;
+
+    gap:20px;
+
+    width:max-content;
+
+    animation:uiuxScroll 20s linear infinite;
+  }
+
+  .uiux-card{
+
+    width:280px;
+    min-width:280px;
+
+    flex:0 0 280px;
+
+  }
+
+  .uiux-card iframe{
+    height:500px;
+  }
 
 }
 
@@ -1517,4 +1537,16 @@ section {
   100% {
     opacity: 0;
   }
+}
+
+@keyframes uiuxScroll{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
 }
