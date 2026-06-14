@@ -1381,7 +1381,7 @@ section {
     display:flex;
     gap:24px;
     width:max-content;
-    animation:videoScroll 40s linear infinite;
+    animation:videoScroll 20s linear infinite;
 }
 
 .video-grid.auto-video-scroll:hover{
@@ -1401,6 +1401,24 @@ section {
 
     to{
         transform:translateX(-50%);
+    }
+
+}
+
+.typing-cursor{
+    color: var(--gold);
+    font-weight: 700;
+    animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor{
+
+    0%,50%{
+        opacity:1;
+    }
+
+    51%,100%{
+        opacity:0;
     }
 
 }

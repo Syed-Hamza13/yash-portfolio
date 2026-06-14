@@ -198,7 +198,7 @@ window.addEventListener("load", () => {
             [...portfolioItems]
         );
 
-    }, 200);
+    }, 10);
 
 });
 
@@ -228,3 +228,42 @@ window.addEventListener("resize", () => {
 
 });
 
+const typingElement =
+    document.getElementById(
+        "typing-name"
+    );
+
+const typingText =
+    "Yash Chourey";
+
+let charIndex = 0;
+
+function typeHeroName(){
+
+    if(
+        charIndex <
+        typingText.length
+    ){
+
+        typingElement.textContent +=
+            typingText.charAt(charIndex);
+
+        charIndex++;
+
+        setTimeout(
+            typeHeroName,
+            150
+        );
+
+    }
+
+}
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+        typeHeroName();
+
+    }
+);
