@@ -711,6 +711,9 @@ section {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 20px;
 }
+#portfolio-grid{
+    min-height:800px;
+}
 
 .portfolio-item {
   position: relative;
@@ -1290,8 +1293,10 @@ section {
     grid-template-rows:repeat(2,1fr);
     gap:20px;
     width:max-content;
+    min-height:auto;
     animation:portfolioScroll 50s linear infinite;
 }
+
 
 .portfolio-grid.normal-grid{
     display:grid;

@@ -191,6 +191,40 @@ function handleFormSubmit(e) {
 }
 
 window.addEventListener("load", () => {
-  updatePortfolioLayout([...portfolioItems]);
+
+    setTimeout(() => {
+
+        updatePortfolioLayout(
+            [...portfolioItems]
+        );
+
+    }, 200);
+
+});
+
+window.addEventListener("resize", () => {
+
+    const activeBtn =
+        document.querySelector(
+            ".filter-btn.active"
+        );
+
+    const filter =
+        activeBtn.dataset.filter;
+
+    let items =
+        [...portfolioItems];
+
+    if(filter !== "all"){
+
+        items = items.filter(
+            item =>
+            item.dataset.category === filter
+        );
+
+    }
+
+    updatePortfolioLayout(items);
+
 });
 
